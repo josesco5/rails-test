@@ -1,0 +1,25 @@
+
+<div id="url-container" class="container">
+  <div class="row">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Website URL's</h3>
+      </div>
+      <div class="panel-body">
+        <form id="url-form">
+          <div class="form-group">
+            <%= label_tag(:web_url, "Website URL") %>
+            <%= url_field(:web, :url, placeholder: "http://www.url.com", class: 'form-control') %>
+          </div>
+        </form>
+
+        <label>Url's List:</label>
+        <ul id="url-list">
+          <% @urls.each do |web_url| %>
+            <li><%= web_url.url %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
