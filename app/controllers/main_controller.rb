@@ -9,6 +9,6 @@ class MainController < ApplicationController
       WebUrl.create(url: data)
     end
 
-    render json: {'status': 'OK'}
+    render json: {status: 'OK'}
   end
 end
